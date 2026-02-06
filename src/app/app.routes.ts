@@ -15,8 +15,11 @@ export const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'service', component: ServicesComponent },
   {
-    path: 'product-details/:slug', // ✅ THIS WAS MISSING
-    component: ProductDetails,
-  },
+  path: 'product-details/:slug',
+  loadComponent: () =>
+    import('./pages/product-details/product-details')
+      .then(m => m.ProductDetails),
+  data: { prerender: false }
+},
   { path: '', redirectTo: 'products', pathMatch: 'full' },
 ];
