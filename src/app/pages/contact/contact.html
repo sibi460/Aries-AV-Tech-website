@@ -1,0 +1,203 @@
+<app-navbar></app-navbar>
+<section class="con">
+
+<section class="contact-page1" #contactRoot>
+
+  <div class="galaxy-overlay"></div>
+
+  <header class="contact-hero1">
+    <h1>Get in Touch</h1>
+    <p>
+      Have a project in mind or need expert guidance on audio-visual and
+      automation solutions? Our team is ready to help you plan, design,
+      and deliver reliable systems tailored to your needs.
+    </p>
+  </header>
+
+  <div class="contact-grid1">
+
+    <div class="contact-card1">
+      <h3>Call Us</h3>
+      <p>Speak directly with our technical team for consultations.</p>
+      <p class="contact-strong1">+91 XXXXXXXXXX</p>
+    </div>
+
+    <div class="contact-card1">
+      <h3>Email Us</h3>
+      <p>Share your project requirements.</p>
+      <p class="contact-strong1">ariesavtech@gmail.com</p>
+    </div>
+
+    <div class="contact-card1">
+      <h3>Our Location</h3>
+      <p>We operate across Chennai and nearby regions.</p>
+      <p class="contact-strong1">Chennai, Tamil Nadu</p>
+    </div>
+
+  </div>
+
+  <p class="contact-note1">
+    Aries AV Tech partners with businesses and institutions to deliver
+    scalable, future-ready audio-visual solutions.
+  </p>
+
+</section>
+
+<section class="contact-section" id="contact">
+
+  <om-dark-veil>
+    <div class="contact-card">
+
+      <!-- ✅ UPDATED FORM -->
+      <form
+        class="contact-form"
+        #contactForm="ngForm"
+        (ngSubmit)="submitForm(contactForm)"
+      >
+
+        <h3>Fill the form</h3>
+
+        <input
+          type="text"
+          placeholder="Company Name"
+          [(ngModel)]="company"
+          name="company"
+          required
+        />
+
+        <div class="form-row">
+          <input
+            type="text"
+            placeholder="First Name"
+            [(ngModel)]="firstName"
+            name="firstName"
+            required
+          />
+
+          <input
+            type="text"
+            placeholder="Last Name"
+            [(ngModel)]="lastName"
+            name="lastName"
+            required
+          />
+        </div>
+
+        <input
+          type="tel"
+          placeholder="Phone Number"
+          [(ngModel)]="phone"
+          name="phone"
+          required
+        />
+
+        <input
+          type="text"
+          placeholder="Location"
+          [(ngModel)]="location"
+          name="location"
+          required
+        />
+
+        <input
+          type="email"
+          placeholder="Email Address"
+          [(ngModel)]="email"
+          name="email"
+          required
+        />
+
+        <textarea
+          placeholder="Message"
+          [(ngModel)]="message"
+          name="message"
+          required
+        ></textarea>
+
+        <!-- ✅ DISABLED UNTIL VALID -->
+    <!-- BUTTONS -->
+<div class="form-actions">
+  <button
+    type="submit"
+    [disabled]="!contactForm.valid"
+  >
+    Send via WhatsApp
+  </button>
+
+  <button
+    type="button"
+    class="email-btn"
+    [disabled]="!contactForm.valid || loading"
+    (click)="sendViaEmail(contactForm)"
+  >
+    {{ loading ? 'Sending...' : 'Send via Email' }}
+  </button>
+</div>
+
+        
+
+        <!-- ❌ INVALID MESSAGE -->
+        <p class="error-msg" *ngIf="contactForm.invalid && contactForm.touched">
+          Please fill all required fields.
+        </p>
+
+        <!-- ✅ SUCCESS MESSAGE -->
+        <p class="success-msg" *ngIf="successMessage">
+          <span class="check">✔</span>
+          {{ successMessage }}
+        </p>
+
+      </form>
+
+      <!-- RIGHT SIDE INFO (UNCHANGED) -->
+      <div class="contact-info">
+        <h2>Get in Touch.</h2>
+        <p>
+          Whether you have questions about our services or need support,
+          our team is here to help.
+        </p>
+
+        <div class="contact-details">
+
+          <div class="contact-item">
+            <lucide-icon [name]="icons.Mail" class="contact-icon"></lucide-icon>
+            <div>
+              <strong>Email</strong>
+              <p>vijay@ariesavtech.com</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <lucide-icon [name]="icons.Phone" class="contact-icon"></lucide-icon>
+            <div>
+              <strong>Phone</strong>
+              <p>+91 99401 11888</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <lucide-icon [name]="icons.Globe" class="contact-icon"></lucide-icon>
+            <div>
+              <strong>Website</strong>
+              <p>ariesavtech.com</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <lucide-icon [name]="icons.MapPin" class="contact-icon"></lucide-icon>
+            <div>
+              <strong>Location</strong>
+              <p>Chennai, India</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </om-dark-veil>
+
+</section>
+</section>
+
+<app-footer></app-footer>

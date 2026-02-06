@@ -1,0 +1,26 @@
+<nav class="navbar" [class.scrolled]="isScrolled" [class.hide]="!isVisible">
+  <div class="nav-container">
+    
+    <div class="nav-left">
+      <img src="/assets/images/ARIES__3_-removebg-preview.png" alt="Logo" class="nav-logo" />
+    
+    </div>
+
+    <div class="nav-right-container">
+      <div class="nav-pages" [class.open]="isMenuOpen">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Home</a>
+        <a routerLink="/products" routerLinkActive="active" (click)="closeMenu()">Products</a>
+        <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a>
+        <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact Us</a>
+        <a routerLink="/service" routerLinkActive="active" (click)="closeMenu()">Service</a>
+      </div>
+
+      <button class="menu-toggle" [class.open]="isMenuOpen" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+  </div>
+</nav>

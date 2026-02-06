@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+
+<section class="product-details-page">
+
+  <div class="product-wrapper" *ngIf="product">
+
+    <!-- IMAGE -->
+    <div class="product-image">
+      <img [src]="product.image" [alt]="product.title" />
+    </div>
+
+    <!-- CONTENT -->
+    <div class="product-content">
+      <h1>{{ product.title }}</h1>
+
+      <p class="product-desc">
+        {{ product.desc }}
+      </p>
+
+      <div class="product-extra">
+        <h3>Why choose this solution?</h3>
+        <ul>
+          <li>Industry-grade components</li>
+          <li>Professional installation & support</li>
+          <li>Scalable & future-ready design</li>
+          <li>Optimized for commercial environments</li>
+        </ul>
+      </div>
+
+      <a routerLink="/contact"  fragment="contact" class="cta-btn">
+        Contact Us for This Product
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+<app-footer></app-footer>

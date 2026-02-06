@@ -1,0 +1,287 @@
+<app-navbar></app-navbar>
+
+<div class="home-wrapper">
+  <section class="hero-showcase" #heroRoot>
+    <!-- BACKGROUND VIDEO -->
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="/assets/images/hero-bg.mp4" type="video/mp4" />
+    </video>
+
+    <!-- DARK OVERLAY (READABILITY) -->
+    <div class="hero-video-overlay"></div>
+
+    <!-- TEXT LAYER -->
+    <div class="hero-text">
+      <div class="hero-copy">
+        <h1 class="hero-title">Engineered in Audio</h1>
+      </div>
+
+      <div class="hero-copy">
+        <h1 class="hero-title">Professional Displays</h1>
+      </div>
+
+      <div class="hero-copy">
+        <h1 class="hero-title a">
+          LED Video
+          <div></div>
+          Walls
+        </h1>
+      </div>
+
+      <div class="hero-copy flat-panel">
+        <h1 class="hero-title a">
+          Interactive Flat
+          <div></div>
+          Panels
+        </h1>
+      </div>
+
+      <div class="hero-copy">
+        <h1 class="hero-title">Advanced Projection</h1>
+      </div>
+    </div>
+
+    <!-- IMAGE LAYER -->
+    <div class="hero-image">
+      <img src="/assets/images/audio3.png" class="hero-slide a" />
+      <img src="/assets/images/display1.png" class="hero-slide" />
+      <img src="/assets/images/panel3.png" class="hero-slide" />
+      <img src="/assets/images/ifp.png" class="hero-slide" />
+      <img src="/assets/images/projector.png" class="hero-slide" />
+    </div>
+  </section>
+
+  <section class="about-intro">
+    <div class="about-inner">
+      <!-- LEFT VISUAL -->
+      <div class="about-visual">
+        <img src="/assets/images/ARIES__3_-removebg-preview.png" alt="AV workspace" />
+      </div>
+
+      <!-- CENTER CONTENT -->
+      <div class="about-content">
+        <span class="about-label">ABOUT ARIES AV TECH</span>
+
+        <h2 class="about-title">
+          Shaping Visions,
+          <span>One Install</span>
+          at a Time
+        </h2>
+
+        <p class="about-text">
+          Aries AV Tech delivers end-to-end audio-visual and automation solutions, integrating
+          advanced technology with thoughtful design. From consultation to commissioning, we create
+          reliable, future-ready systems that elevate modern spaces and build long-term
+          partnerships.
+        </p>
+
+        <a
+          class="about-btn"
+          routerLink="/about"
+          routerLinkActive="active"
+          aria-label="Read more about Aries AV Tech"
+        >
+          Explore More
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="solutions" id="solutions">
+    <div class="solutions-bg"></div>
+
+    <!-- HEADER -->
+    <div class="solutions-header">
+      <span class="solutions-tag"> INNOVATIVE SOLUTIONS · FLAWLESS EXECUTION </span>
+
+      <div class="solutions-line"></div>
+
+      <h2 class="solutions-title">Transforming Spaces with AV Excellence</h2>
+    </div>
+
+    <!-- GRID -->
+    <div class="solutions-grid">
+      <div class="solution-card bg-videowall">
+        <h3>LED Video Wall</h3>
+      </div>
+
+      <div class="solution-card bg-boardroom">
+        <h3>Board Room</h3>
+      </div>
+
+      <div class="solution-card bg-classroom">
+        <h3>Digital Classroom</h3>
+      </div>
+
+      <div class="solution-card bg-training">
+        <h3>Training Room</h3>
+      </div>
+
+      <div class="solution-card bg-cinema">
+        <h3>Home Cinema</h3>
+      </div>
+
+      <div class="solution-card bg-huddle">
+        <h3>Huddle Room</h3>
+      </div>
+
+      <div class="solution-card bg-video">
+        <h3>Video Conferencing</h3>
+      </div>
+
+      <div class="solution-card bg-acoustic">
+        <h3>Sound & Acoustics</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="partners">
+    <div class="partners-header">
+      <h2 class="partners-title">Trusted Technology Partners</h2>
+      <p class="partners-subtitle">
+        Collaborating with global brand to deliver reliable AV excellence
+      </p>
+    </div>
+
+    <div class="partners-mask">
+      <div class="partners-track">
+        <img src="/assets/images/sony.png" alt="hello" />
+        <img src="/assets/images/lg.png" />
+        <img src="/assets/images/samsung.png" />
+        <img src="/assets/images/crestron.png" />
+        <img src="/assets/images/bose1.png" />
+        <img src="/assets/images/poly1.png" />
+
+        <!-- duplicate -->
+        <img src="/assets/images/sony.png" />
+        <img src="/assets/images/lg.png" />
+        <img src="/assets/images/samsung.png" />
+        <img src="/assets/images/crestron.png" />
+        <img src="/assets/images/bose1.png" />
+        <img src="/assets/images/poly1.png" alt="hi" />
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <!-- GLASS / DARK VEIL WRAPPER -->
+    <om-dark-veil>
+      <div class="contact-card">
+        <!-- LEFT : FORM -->
+        <form class="contact-form" #homeForm="ngForm" (ngSubmit)="submitForm(homeForm)">
+          <h3>Fill the form</h3>
+
+          <input
+            type="text"
+            placeholder="Company Name"
+            [(ngModel)]="company"
+            name="company"
+            required
+          />
+
+          <div class="form-row">
+            <input
+              type="text"
+              placeholder="First Name"
+              [(ngModel)]="firstName"
+              name="firstName"
+              required
+            />
+
+            <input
+              type="text"
+              placeholder="Last Name"
+              [(ngModel)]="lastName"
+              name="lastName"
+              required
+            />
+          </div>
+
+          <input type="tel" placeholder="Phone Number" [(ngModel)]="phone" name="phone" required />
+
+          <input
+            type="text"
+            placeholder="Location"
+            [(ngModel)]="location"
+            name="location"
+            required
+          />
+
+          <input
+            type="email"
+            placeholder="Email Address"
+            [(ngModel)]="email"
+            name="email"
+            required
+          />
+
+          <textarea placeholder="Message" [(ngModel)]="message" name="message" required></textarea>
+
+          <div class="form-actions">
+            <button type="submit" [disabled]="!homeForm.valid">Send via WhatsApp</button>
+
+            <button
+              type="button"
+              class="email-btn"
+              [disabled]="!homeForm.valid || loading"
+              (click)="sendViaEmail(homeForm)"
+            >
+              {{ loading ? 'Sending...' : 'Send via Email' }}
+            </button>
+          </div>
+
+          <!-- ✅ SUCCESS MESSAGE -->
+          <p class="success-msg" *ngIf="successMessage">
+            <span class="check">✔</span>
+            {{ successMessage }}
+          </p>
+        </form>
+
+        <!-- RIGHT : INFO (UNCHANGED) -->
+        <div class="contact-info">
+          <h2>Get in Touch.</h2>
+
+          <p>
+            Whether you have questions about our services, need support, or want to share your
+            feedback, our dedicated team is here to assist you every step of the way.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <lucide-icon [name]="icons.Mail" class="contact-icon"></lucide-icon>
+              <div>
+                <strong>Email</strong>
+                <p>vijay@ariesavtech.com</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <lucide-icon [name]="icons.Phone" class="contact-icon"></lucide-icon>
+              <div>
+                <strong>Phone</strong>
+                <p>+91 99401 11888</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <lucide-icon [name]="icons.Globe" class="contact-icon"></lucide-icon>
+              <div>
+                <strong>Website</strong>
+                <p>ariesavtech.com</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <lucide-icon [name]="icons.MapPin" class="contact-icon"></lucide-icon>
+              <div>
+                <strong>Location</strong>
+                <p>Chennai, India</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </om-dark-veil>
+  </section>
+</div>
+<app-footer></app-footer>

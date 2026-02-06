@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root Theme */
+:root {
+  --bg-dark: #0b0b0b;
+  --bg-light: #111;
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --accent: #00ffd5;
+}
+
+/* Body */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Section spacing */
+section {
+  padding: 80px 8%;
+  padding-left: 40px;
+}

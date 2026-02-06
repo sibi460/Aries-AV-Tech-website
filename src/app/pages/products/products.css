@@ -1,0 +1,248 @@
+/* ===============================
+   PAGE WRAPPER
+================================ */
+.products-page {
+  position: relative; /* REQUIRED for galaxy layering */
+  min-height: 100vh;
+  padding: 140px 8% 120px;
+  overflow: hidden;
+  margin-top: -110px;
+}
+
+/* ===============================
+   GALAXY BACKGROUND
+================================ */
+.galaxy-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* OPTIONAL DARK OVERLAY */
+.galaxy-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(2, 6, 23, 0.85),
+    rgba(2, 6, 23, 0.95)
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* CONTENT ABOVE BACKGROUND */
+.products-hero,
+.products-grid {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===============================
+   HERO
+================================ */
+.products-hero {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 90px;
+}
+
+.products-hero h1 {
+  font-size: 56px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #16eeb8, rgba(255,255,255,0.15));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.products-hero p {
+  font-size: 18px;
+  margin-top: 16px;
+  color: rgba(255,255,255,0.85);
+}
+
+/* ===============================
+   GRID
+================================ */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 42px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* ===============================
+   CARD
+================================ */
+.product-card {
+  position: relative;
+  overflow: hidden;
+  perspective: 800px;
+
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+
+  border-radius: 22px;
+  background: #ffffff;
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.55);
+}
+
+/* ===============================
+   IMAGE AREA
+================================ */
+.product-image {
+  height: 240px;
+  border-radius: 14px;
+  margin: 0 -10px 24px;
+
+  background: linear-gradient(135deg, #606967, rgba(0,0,0,0));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===============================
+   TEXT
+================================ */
+.product-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #2e2e2e;
+}
+
+.product-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* ===============================
+   BACKGROUND IMAGE LAYERS
+================================ */
+.product-bg,
+.product-bg1,
+.product-bg2 {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: scale(1);
+  transition:
+    transform 0.5s ease,
+    background-position 0.3s ease;
+  z-index: 0;
+}
+
+.product-bg {
+  background-size: 90%;
+  margin-bottom: 110px;
+}
+
+.product-bg1 {
+  background-size: 80%;
+  margin-bottom: 110px;
+}
+
+.product-bg2 {
+  background-size: 80%;
+  margin-bottom: 190px;
+}
+
+/* HOVER PARALLAX */
+.product-card:hover .product-bg,
+.product-card:hover .product-bg1,
+.product-card:hover .product-bg2 {
+  transform: scale(1.15);
+  background-position: var(--x, 50%) var(--y, 50%);
+}
+
+/* ===============================
+   RESPONSIVE — LAPTOP
+================================ */
+@media (max-width: 1200px) {
+  .products-page {
+    padding: 120px 6% 100px;
+  }
+}
+
+/* ===============================
+   RESPONSIVE — TABLET
+================================ */
+@media (max-width: 900px) {
+  .products-hero h1 {
+    font-size: 42px;
+  }
+
+  .products-hero p {
+    font-size: 16px;
+  }
+
+  .products-grid {
+    gap: 32px;
+  }
+
+  .product-card {
+    padding: 28px;
+  }
+}
+
+/* ===============================
+   RESPONSIVE — MOBILE
+================================ */
+@media (max-width: 768px) and (min-width:350){
+  .products-page {
+    padding: 100px 20px 90px;
+    margin-top: -80px;
+  }
+
+  .products-hero {
+    margin-bottom: 70px;
+  }
+
+  .products-hero h1 {
+    font-size: 34px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-image {
+    height: 200px;
+  }
+
+  .product-card h3 {
+    font-size: 20px;
+  }
+
+  .product-card p {
+    font-size: 14px;
+  }
+}
+
+/* ===============================
+   RESPONSIVE — SMALL MOBILE
+================================ */
+@media (max-width: 480px) {
+  .products-page {
+    padding: 90px 16px 80px;
+  }
+  .products-hero{
+    margin-top: 80px;
+  }
+  .products-hero h1 {
+    font-size: 28px;
+  }
+}

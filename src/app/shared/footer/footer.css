@@ -1,0 +1,9 @@
+.footer {
+  padding: 24px 8%;
+  background: radial-gradient(
+    circle at top,
+    #6e2b8f,
+    #1b0836
+  );  color: var(--text-secondary);
+  font-size: 14px;
+}
