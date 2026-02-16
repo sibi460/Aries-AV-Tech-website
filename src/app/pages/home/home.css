@@ -1365,6 +1365,11 @@ body {
     margin-left: -70px;
     margin-bottom: 100px;
   }
+    .hero-copy.flat-panel {
+    transform: translateX(-20px);
+    max-width: 520px;
+    padding-left: 35px;
+  }
 }
 /* LARGE DESKTOPS (1440px+) */
 @media (max-width: 1023px) and (min-width: 800px) {
