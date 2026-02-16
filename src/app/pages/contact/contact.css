@@ -147,6 +147,17 @@
 
   box-shadow: 0 40px 120px rgba(0, 0, 0, 0.65);
 }
+.product-required-message {
+  background: rgba(0, 242, 195, 0.1);
+  border-left: 4px solid #00f2c3;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #ffffff;
+  margin-left: 100px;
+  border-radius: 6px;
+  width: 90%;
+}
 
 /* OPTIONAL OUTER SPACING */
 om-dark-veil {
@@ -214,29 +225,18 @@ om-dark-veil {
 
 /* BUTTON */
 .contact-form button {
-  margin-top: 24px;
-  padding: 11px 28px;
-
+  padding: 14px 36px;
   border-radius: 30px;
-  border: none;
-
-  background: linear-gradient(135deg, #00ffd5, #7cf7e7);
-  color: #001a17;
-
-  font-size: 14px;
-  font-weight: 600;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
   cursor: pointer;
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+  transition: all 0.3s ease;
 }
 
-.contact-form button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 40px rgba(0, 255, 213, 0.35);
+.contact-form button:hover {  background: var(--accent);
+  color: #000;
 }
-
 /* ===============================
    INFO (RIGHT)
 ================================ */
@@ -333,6 +333,17 @@ om-dark-veil {
   .contact-form h3 {
     font-size: 20px;
   }
+  .product-required-message {
+  background: rgba(0, 242, 195, 0.1);
+  border-left: 4px solid #00f2c3;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #ffffff;
+  margin-left: -40px;
+  border-radius: 6px;
+  width: 125%;
+}
 }
 .form-actions {
   display: flex;

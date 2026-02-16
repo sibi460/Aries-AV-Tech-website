@@ -45,9 +45,14 @@ export class ProductsComponent implements AfterViewInit, OnDestroy {
 
     if (!submitted) {
       // 🔒 Force contact form first
-      this.router.navigate(['/contact'], {
-        queryParams: { product: productSlug }
-      });
+    this.router.navigate(['/contact'], {
+  fragment: 'contact',
+  queryParams: {
+    product: productSlug,
+    required: 'product'
+  }
+});
+
     } else {
       // ✅ Go directly to product details
       this.router.navigate(['/product-details', productSlug]);

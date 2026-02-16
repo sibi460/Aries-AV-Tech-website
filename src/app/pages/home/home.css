@@ -569,12 +569,16 @@
 }
 
 .solution-card h3 {
-  font-size: 22px;
-  font-weight: 600;
-  color: white;
+  font-size: 25px;
+  font-weight: 2000px;
   text-align: center;
   margin-bottom: -10px;
   transform: translateY(-6px);
+
+  background: linear-gradient(135deg, #a9abaa);
+
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .solution-card p {
@@ -828,13 +832,15 @@
 .partners-track {
   display: flex;
   width: max-content; /* Prevents the track from wrapping */
-  gap: 80px; /* Must match the 'gap' variable in TS */
+  gap: 90px; /* Must match the 'gap' variable in TS */
 }
 
 .partners-track img {
   flex-shrink: 0; /* Prevents desktop browsers from squashing logos */
   width: 150px; /* Set a fixed width to ensure JS math is stable */
   height: auto;
+  border-radius: 1%;
+  background: linear-gradient(90deg,  #6e2b8f, rgba(0, 255, 213, 0));
 }
 partners-track img:hover {
   opacity: 1;
@@ -892,6 +898,13 @@ partners-track img:hover {
   .partners-track {
     gap: 28px;
   }
+  .partners-track img {
+  flex-shrink: 0; /* Prevents desktop browsers from squashing logos */
+  width: 90px; /* Set a fixed width to ensure JS math is stable */
+  height: auto;
+  border-radius: 1%;
+  background: linear-gradient(90deg,  #6e2b8f, rgba(0, 255, 213, 0));
+}
 }
 
 /* ===============================
@@ -999,29 +1012,19 @@ om-dark-veil {
 
 /* BUTTON */
 .contact-form button {
-  margin-top: 24px;
-  padding: 11px 28px;
-
+  padding: 14px 36px;
   border-radius: 30px;
-  border: none;
-
-  background: linear-gradient(135deg, #00ffd5, #7cf7e7);
-  color: #001a17;
-
-  font-size: 14px;
-  font-weight: 600;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
   cursor: pointer;
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+  transition: all 0.3s ease;
 }
 
 .contact-form button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 40px rgba(0, 255, 213, 0.35);
+  background: var(--accent);
+  color: #000;
 }
-
 .form-actions {
   display: flex;
   gap: 12px;
@@ -1263,15 +1266,15 @@ body {
     padding-left: 20px;
   }
 }
-@media (max-width: 799px)  and (min-width:680px){
-    .hero-text h1 {
+@media (max-width: 799px) and (min-width: 680px) {
+  .hero-text h1 {
     font-size: 48px;
     margin-top: 100px;
   }
 
   .hero-image {
     position: relative;
-    left:100px;
+    left: 100px;
     margin-top: 600px;
   }
   .hero-image img {
@@ -1283,15 +1286,15 @@ body {
     margin-bottom: 50px;
   }
 }
-@media (max-width: 680px)  and (min-width:580px){
-    .hero-text h1 {
+@media (max-width: 680px) and (min-width: 580px) {
+  .hero-text h1 {
     font-size: 48px;
     margin-top: 100px;
   }
 
   .hero-image {
     position: relative;
-    left:100px;
+    left: 100px;
     margin-top: 600px;
   }
   .hero-image img {
@@ -1303,15 +1306,15 @@ body {
     margin-bottom: 50px;
   }
 }
-@media (max-width: 580px)  and (min-width:520px){
-    .hero-text h1 {
+@media (max-width: 580px) and (min-width: 520px) {
+  .hero-text h1 {
     font-size: 48px;
     margin-top: 100px;
   }
 
   .hero-image {
     position: relative;
-    left:100px;
+    left: 100px;
     margin-top: 600px;
   }
   .hero-image img {
@@ -1323,15 +1326,15 @@ body {
     margin-bottom: 50px;
   }
 }
-@media (max-width: 520px)  and (min-width:440px){
-    .hero-text h1 {
+@media (max-width: 520px) and (min-width: 440px) {
+  .hero-text h1 {
     font-size: 48px;
     margin-top: 100px;
-   }
+  }
 
   .hero-image {
     position: relative;
-    left:100px;
+    left: 100px;
     margin-top: 600px;
   }
   .hero-image img {
@@ -1343,15 +1346,15 @@ body {
     margin-bottom: 100px;
   }
 }
-@media (max-width: 440px)  and (min-width:380px){
-    .hero-text h1 {
+@media (max-width: 440px) and (min-width: 380px) {
+  .hero-text h1 {
     font-size: 48px;
     margin-top: 100px;
-   }
+  }
 
   .hero-image {
     position: relative;
-    left:100px;
+    left: 100px;
     margin-top: 600px;
   }
   .hero-image img {
@@ -1364,14 +1367,14 @@ body {
   }
 }
 /* LARGE DESKTOPS (1440px+) */
- @media (max-width: 1023px)  and (min-width:800px){
+@media (max-width: 1023px) and (min-width: 800px) {
   .hero-text h1 {
     font-size: 48px;
   }
 
   .hero-image {
     position: relative;
-    left:100px;
+    left: 100px;
     margin-top: 600px;
   }
   .hero-image img {
@@ -1382,15 +1385,17 @@ body {
     margin-left: 150px;
     margin-bottom: 50px;
   }
-} 
- @media (max-width: 1500px)  and (min-width:1024px){
+}
+@media (max-width: 1500px) and (min-width: 1024px) {
   .hero-text h1 {
-    font-size: 48px;
+    font-size: 58px;
+    margin-top: 160px;
+    margin-left: -80px;
   }
 
   .hero-image {
     position: relative;
-    left:100px;
+    left: 100px;
     margin-top: 600px;
   }
   .hero-image img {
@@ -1401,4 +1406,4 @@ body {
     margin-left: 350px;
     margin-bottom: 30px;
   }
-} 
+}

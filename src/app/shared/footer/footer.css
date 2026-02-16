@@ -1,9 +1,232 @@
+/* ===============================
+   FOOTER BASE
+================================ */
 .footer {
-  padding: 24px 8%;
-  background: radial-gradient(
-    circle at top,
-    #6e2b8f,
-    #1b0836
-  );  color: var(--text-secondary);
+  background: #0f0f0f;
+  color: #cfcfcf;
+  padding: 60px 20px 20px;
+  font-family: inherit;
+}
+
+/* ===============================
+   FOOTER GRID
+================================ */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ===============================
+   HEADINGS
+================================ */
+.footer h3,
+.footer h4 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* ===============================
+   BRAND
+================================ */
+.footer-brand p {
   font-size: 14px;
+  line-height: 1.6;
+  color: #9a9a9a;
+}
+
+/* ===============================
+   LINKS
+================================ */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer-links a {
+  color: #cfcfcf;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+/* ===============================
+   CONTACT
+================================ */
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.footer-contact .contact-item {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  column-gap: 14px;
+  align-items: start;
+}
+
+.footer-contact .contact-icon {
+  width: 20px;
+  height: 20px;
+  color: #00f2c3; /* exact color you wanted */
+  margin-top: 2px;
+}
+
+.footer-contact strong {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.footer-contact p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #bfc6c9;
+}
+
+/* ===============================
+   SOCIAL ICONS (SVG)
+================================ */
+.footer-social {
+  margin-top: -30px;
+
+}
+
+.social-links {
+  display: flex;
+  gap: 14px;
+  margin-left: 120px;
+  margin-top:-70px;
+}
+
+.social-links a {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover pop */
+.social-links a:hover {
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* SVG icon itself – ORIGINAL COLOR */
+.social-svg {
+  width: 25px;
+  height: 25px;
+  display: block;
+
+  filter: none; /* IMPORTANT: keep original SVG color */
+  transition: transform 0.25s ease;
+}
+
+/* Micro pop on icon */
+.social-links a:hover .social-svg {
+  transform: scale(1.05);
+}
+
+/* ===============================
+   BOTTOM BAR
+================================ */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 40px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 13px;
+  color: #8a8a8a;
+}
+/* ===============================
+   RESPONSIVE FIXES ONLY
+   (NO DESKTOP CHANGES)
+================================ */
+
+/* -------- Tablet (≤1024px) -------- */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .social-links {
+    margin-left: 0;
+    margin-top: 20px;
+    justify-content: flex-start;
+  }
+
+  .footer-social {
+    margin-top: 0;
+  }
+}
+
+/* -------- Mobile (≤768px) -------- */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  .footer-contact {
+    align-items: center;
+  }
+
+  .footer-contact .contact-item {
+    grid-template-columns: 20px 1fr;
+    justify-content: center;
+  }
+
+  .social-links {
+    justify-content: center;
+    margin-left: 0;
+    margin-top: 24px;
+  }
+
+  .footer-social {
+    margin-top: 20px;
+  }
+}
+
+/* -------- Small Mobile (≤480px) -------- */
+@media (max-width: 480px) {
+  .social-links {
+    gap: 12px;
+  }
+
+  .social-links a {
+    width: 38px;
+    height: 38px;
+  }
+
+  .social-svg {
+    width: 22px;
+    height: 22px;
+  }
 }

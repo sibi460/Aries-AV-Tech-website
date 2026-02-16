@@ -19,7 +19,7 @@
     <div class="contact-card1">
       <h3>Call Us</h3>
       <p>Speak directly with our technical team for consultations.</p>
-      <p class="contact-strong1">+91 XXXXXXXXXX</p>
+      <p class="contact-strong1">+91 99401 11888</p>
     </div>
 
     <div class="contact-card1">
@@ -44,6 +44,9 @@
 </section>
 
 <section class="contact-section" id="contact">
+<div *ngIf="showProductNotice" class="product-required-message">
+  ⚠ Kindly complete the contact form, and our team will promptly assist you.
+</div>
 
   <om-dark-veil>
     <div class="contact-card">
@@ -171,7 +174,7 @@
             <lucide-icon [name]="icons.Phone" class="contact-icon"></lucide-icon>
             <div>
               <strong>Phone</strong>
-              <p>+91 99401 11888</p>
+              <p>+91 98401 12411</p>
             </div>
           </div>
 

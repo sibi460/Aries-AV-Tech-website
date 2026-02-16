@@ -61,6 +61,8 @@ export class ContactComponent implements AfterViewInit, OnDestroy {
   message = '';
   successMessage = '';
   errorMessage = '';
+  showProductNotice = false;
+
 
   icons = { Mail, Phone, MapPin, Globe };
 
@@ -76,6 +78,13 @@ export class ContactComponent implements AfterViewInit, OnDestroy {
     this.route.queryParams.subscribe(params => {
       this.selectedProduct = params['product'] || null;
     });
+    this.route.queryParams.subscribe(params => {
+  if (params['required'] === 'product') {
+    this.showProductNotice = true;
+  }
+
+  this.selectedProduct = params['product'] || null;
+});
 
     this.ctx = gsap.context(() => {
       gsap.from('.contact-hero1 h1', {

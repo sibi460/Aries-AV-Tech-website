@@ -7,19 +7,18 @@ import { ServicesComponent } from './pages/services/services';
 import { ProductDetails } from './pages/product-details/product-details';
 export const routes: Routes = [
   {
-    path: '',
+    path: '', title:"HOME",
     component: HomeComponent,
   },
-  { path: 'products', component: ProductsComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'service', component: ServicesComponent },
+  { path: 'products',title:"PRODUCTS" ,component: ProductsComponent },
+  { path: 'about',title:"ABOUT", component: AboutComponent },
+  { path: 'contact', title:"CONTACT",component: ContactComponent },
+  { path: 'service',title:"SERVICE", component: ServicesComponent },
   {
-  path: 'product-details/:slug',
+  path: 'product-details/:slug',title:"PRODUCTS-DETAILS",
   loadComponent: () =>
     import('./pages/product-details/product-details')
       .then(m => m.ProductDetails),
   data: { prerender: false }
-},
-  { path: '', redirectTo: 'products', pathMatch: 'full' },
+}
 ];

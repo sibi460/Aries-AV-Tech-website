@@ -102,22 +102,16 @@
 }
 
 .cta-btn {
-  display: inline-block;
-  padding: 14px 38px;
-  background: linear-gradient(135deg, #16eeb8, #7cf7e7);
-  color: #1b0836;
-  font-weight: 600;
+  padding: 14px 36px;
   border-radius: 30px;
-  text-decoration: none;
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-
-.cta-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 36px rgba(22,238,184,0.45);
+.cta-btn:hover {  background: var(--accent);
+  color: #000;
 }
 
 /* ===============================

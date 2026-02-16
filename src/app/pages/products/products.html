@@ -1,92 +1,83 @@
 <app-navbar></app-navbar>
 
 <section class="products-page" #productsRoot>
-
   <om-galaxy class="galaxy-bg"></om-galaxy>
   <div class="galaxy-overlay"></div>
 
   <div class="products-container">
-
     <header class="products-hero">
       <h1>Products Range</h1>
-      <p>
-        Industry-grade audio-visual solutions engineered for performance
-        and longevity.
-      </p>
+      <p>Industry-grade audio-visual solutions engineered for performance and longevity.</p>
     </header>
 
     <div class="products-grid">
-
       <div class="product-card" (click)="openProduct('professional-speakers')">
-        <div class="product-bg" style="background-image:url('/assets/images/audio.png')"></div>
+        <div class="product-bg" style="background-image: url('/assets/images/audio.png')"></div>
         <div class="product-image"></div>
         <h3>Professional Speakers</h3>
         <p>High-fidelity sound systems for commercial environments.</p>
       </div>
 
       <div class="product-card" (click)="openProduct('led-displays')">
-        <div class="product-bg" style="background-image:url('/assets/images/display1.png')"></div>
+        <div class="product-bg" style="background-image: url('/assets/images/display1.png')"></div>
         <div class="product-image"></div>
-        <h3>LED AIO Displays</h3>
+        <h3>AIO Displays</h3>
         <p>Ultra-bright displays for indoor and outdoor applications.</p>
       </div>
-      
-       <div class="product-card" (click)="openProduct('cctv-surveillance')">
-        <div class="product-bg" style="background-image:url('/assets/images/bbb.png')"></div>
+
+      <div class="product-card" (click)="openProduct('LED Video Wall System')">
+        <div class="product-bg" style="background-image: url('/assets/images/bbb.png')"></div>
         <div class="product-image"></div>
         <h3>LED Video Wall System</h3>
         <p>Advanced security systems with real-time monitoring.</p>
       </div>
 
       <div class="product-card" (click)="openProduct('interactive-panels')">
-        <div class="product-bg1" style="background-image:url('/assets/images/ifp.png')"></div>
+        <div class="product-bg1" style="background-image: url('/assets/images/ifp.png')"></div>
         <div class="product-image"></div>
         <h3>Interactive Panels</h3>
         <p>Touch-enabled collaboration solutions.</p>
       </div>
 
       <div class="product-card" (click)="openProduct('digital-signage')">
-        <div class="product-bg" style="background-image:url('/assets/images/ccc.png')"></div>
+        <div class="product-bg" style="background-image: url('/assets/images/ccc.png')"></div>
         <div class="product-image"></div>
         <h3>Digital Signage Displays</h3>
         <p>Dynamic display solutions for branding and information.</p>
       </div>
 
-       <div class="product-card" (click)="openProduct('video-walls')">
-        <div class="product-bg2" style="background-image:url('/assets/images/panel2.png')"></div>
+      <div class="product-card" (click)="openProduct('video-walls')">
+        <div class="product-bg1" style="background-image: url('/assets/images/a1.png')"></div>
         <div class="product-image"></div>
-        <h3>Video Wall Systems</h3>
+        <h3>XR AV</h3>
         <p>Large-scale multi-screen display solutions.</p>
       </div>
 
       <div class="product-card" (click)="openProduct('conference-audio')">
-        <div class="product-bg" style="background-image:url('/assets/images/audio-con.png')"></div>
+        <div class="product-bg" style="background-image: url('/assets/images/audio-con.png')"></div>
         <div class="product-image"></div>
         <h3>Conference Audio Systems</h3>
         <p>Crystal-clear audio for professional meeting spaces.</p>
       </div>
 
-     
-
       <div class="product-card" (click)="openProduct('classroom-av')">
-        <div class="product-bg" style="background-image:url('/assets/images/av.png')"></div>
+        <div class="product-bg" style="background-image: url('/assets/images/av.png')"></div>
         <div class="product-image"></div>
         <h3>Classroom AV Solutions</h3>
         <p>Smart tools for modern digital classrooms.</p>
       </div>
 
-     
-
       <div class="product-card" (click)="openProduct('av-control-systems')">
-        <div class="product-bg1" style="background-image:url('/assets/images/Control-systems.png')"></div>
+        <div
+          class="product-bg1"
+          style="background-image: url('/assets/images/Control-systems.png')"
+        ></div>
         <div class="product-image"></div>
         <h3>AV Control Systems</h3>
         <p>Centralized automation for integrated environments.</p>
       </div>
-
     </div>
   </div>
-
 </section>
 
 <app-footer></app-footer>

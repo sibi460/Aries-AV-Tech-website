@@ -26,7 +26,12 @@ export class ProductDetails implements OnInit {
       desc: 'Ultra-bright displays for indoor and outdoor applications.',
       image: '/assets/images/display1.png'
     },
-    'interactive-panels': {
+    'LED Video Wall System': {
+      title: 'Interactive Panels',
+      desc: 'Touch-enabled collaboration solutions.',
+      image: '/assets/images/bbb.png'
+    },
+     'interactive-panels': {
       title: 'Interactive Panels',
       desc: 'Touch-enabled collaboration solutions.',
       image: '/assets/images/ifp.png'
@@ -34,28 +39,24 @@ export class ProductDetails implements OnInit {
     'digital-signage': {
       title: 'Digital Signage',
       desc: 'Dynamic display solutions for branding and information.',
-      image: '/assets/images/digtal-signage.png'
+      image: '/assets/images/ccc.png'
     },
-    'conference-audio-systems': {
+      'video-walls': {
+      title: 'Video Wall Systems',
+      desc: 'Large-scale multi-screen display solutions.',
+      image: '/assets/images/a1.png'
+    },
+    'conference-audio': {
       title: 'Conference Audio Systems',
       desc: 'Crystal-clear audio for professional meeting spaces.',
       image: '/assets/images/audio-con.png'
-    },
-    'cctv-surveillance': {
-      title: 'CCTV & Surveillance',
-      desc: 'Advanced security systems with real-time monitoring.',
-      image: '/assets/images/CCTV-Camera.png'
     },
     'classroom-av': {
       title: 'Classroom AV Solutions',
       desc: 'Smart tools for modern digital classrooms.',
       image: '/assets/images/av.png'
     },
-    'video-walls': {
-      title: 'Video Wall Systems',
-      desc: 'Large-scale multi-screen display solutions.',
-      image: '/assets/images/panel2.png'
-    },
+  
     'av-control-systems': {
       title: 'AV Control Systems',
       desc: 'Centralized automation for integrated environments.',
