@@ -13,12 +13,13 @@ import { gsap } from 'gsap';
 
 import { NavbarComponent } from '../../shared/navbar/navbar';
 import { FooterComponent } from '../../shared/footer/footer';
+import { RouterLink } from '@angular/router';
 // import { NgxGalaxyComponent } from '@omnedia/ngx-galaxy';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [NavbarComponent, FooterComponent],
+  imports: [NavbarComponent, FooterComponent,RouterLink],
   templateUrl: './about.html',
   styleUrl: './about.css',
 })
