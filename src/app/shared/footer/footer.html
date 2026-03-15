@@ -11,26 +11,37 @@
     </div>
 
     <!-- QUICK LINKS -->
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/products">Products</a></li>
-        <li><a routerLink="/contact">Contact</a></li>
-        <li><a routerLink="/about">About</a></li>
-      </ul>
-    </div>
+<div class="footer-links">
+
+  <h4 (click)="toggleSection('links')">
+    Quick Links
+  </h4>
+
+  <ul [class.open]="openSection === 'links'">
+    <li><a routerLink="/" (click)="closeSection()">Home</a></li>
+    <li><a routerLink="/products" (click)="closeSection()">Products</a></li>
+    <li><a routerLink="/about" (click)="closeSection()">About</a></li>
+    <li><a routerLink="/contact" (click)="closeSection()">Contact</a></li>
+    <li><a routerLink="/service" (click)="closeSection()">Service</a></li>
+  </ul>
+
+</div>
 
     <!-- SERVICES -->
-    <div class="footer-links">
-      <h4>Solutions</h4>
-      <ul>
-        <li>Audio Systems</li>
-        <li>Video Walls</li>
-        <li>Conference Solutions</li>
-        <li>Automation</li>
-      </ul>
-    </div>
+  <div class="footer-links">
+
+  <h4 (click)="toggleSection('solutions')">
+    Solutions
+  </h4>
+
+  <ul [class.open]="openSection === 'solutions'">
+    <li>Audio Systems</li>
+    <li>Video Walls</li>
+    <li>Conference Solutions</li>
+    <li>Automation</li>
+  </ul>
+
+</div>
 
     <!-- CONTACT -->
  <div class="footer-contact">
